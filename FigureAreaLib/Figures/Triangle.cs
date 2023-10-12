@@ -22,10 +22,10 @@
                 throw new ArgumentException("Количество сторон должно быть равно трём!");
             if (edges[0] < 0 && edges[1] < 0 && edges[2] < 0)
                 throw new ArgumentException("Размер сторон должен быть положительный!");
-            if (_edges[0] + _edges[1] > _edges[2] * _edges[2] 
-                && _edges[0] + _edges[2] > _edges[1] * _edges[1] 
-                && _edges[1] + _edges[2] > _edges[0] * _edges[0])
-                throw new ArgumentException("Сумма двух сторон не должна быть больше квадрата третей стороны!");
+            if (_edges[0] + _edges[1] != _edges[2] * _edges[2] 
+                || _edges[0] + _edges[2] != _edges[1] * _edges[1] 
+                || _edges[1] + _edges[2] != _edges[0] * _edges[0])
+                throw new ArgumentException("Сумма двух сторон  должна быть равна квадрату третей стороны!");
             return true;
         }
 
