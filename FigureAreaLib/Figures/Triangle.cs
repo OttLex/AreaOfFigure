@@ -12,7 +12,7 @@
 
         public override double GetArea()
         {
-            var value = (_edges[0] + _edges[1] + _edges[2]) / 2;
+            var value = (_edges.Sum()) / 2;
             return Math.Sqrt(value * (value - _edges[0]) * (value - _edges[1]) * (value - _edges[2]));
         }
 
